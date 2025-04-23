@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Blog</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html" id="login-logout-link">Login</a>
+        <button id="create-post-btn" class="btn btn-primary" style="display: none;">Create New Post</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Latest Posts</h2>
+
+    <div id="blog-posts">
+      <article class="blog-post-summary">
+        <h3><a href="blog-detail.html">My First Blog Post</a></h3>
+        <p>This is a short summary of the first blog post...</p>
+
+        <div class="post-actions">
+          <a href="blog-detail.html" class="btn btn-secondary">Read More</a>
+          <button class="btn btn-edit" style="display: none;">Edit</button>
+          <button class="btn btn-delete" style="display: none;">Delete</button>
+        </div>
+      </article>
+
+      <article class="blog-post-summary">
+        <h3><a href="blog-detail.html">Another Interesting Topic</a></h3>
+        <p>A brief look into another interesting topic discussed here...</p>
+
+        <div class="post-actions">
+          <a href="blog-detail.html" class="btn btn-secondary">Read More</a>
+          <button class="btn btn-edit" style="display: none;">Edit</button>
+          <button class="btn btn-delete" style="display: none;">Delete</button>
+        </div>
+      </article>
+    </div>
+
+    <div id="create-post-form-container"
+      style="display: none; margin-top: 20px; border: 1px solid #ccc; padding: 15px;">
+      <h3>Create New Post</h3>
+
+      <form id="create-post-form">
+        <div class="form-group">
+          <label for="new-post-title">Title:</label>
+          <input type="text" id="new-post-title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="new-post-content">Content:</label>
+          <textarea id="new-post-content" name="content" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Post</button>
+        <button type="button" id="cancel-create-btn" class="btn btn-secondary">Cancel</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog</p>
+  </footer>
+</body>
+
+</html>
